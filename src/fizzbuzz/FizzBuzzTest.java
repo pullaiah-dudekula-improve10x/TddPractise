@@ -15,6 +15,10 @@ class FizzBuzzTest {
     }
 
     @Test
+    public void nothing() {
+    }
+
+    @Test
     public void findFizzBuzz() {
         String fizzBuzz1 = fizzBuzz.findFizzBuzz(15);
         assertEquals("FizzBuzz",fizzBuzz1 );
