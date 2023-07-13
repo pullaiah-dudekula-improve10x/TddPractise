@@ -1,3 +1,6 @@
+package lessthenhundred;
+
+import lessthenhundred.LessThenHundred;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

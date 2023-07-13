@@ -1,3 +1,5 @@
+package lessthenhundred;
+
 public class LessThenHundred {
 
     public boolean lessThenHundred(int a, int b) {
