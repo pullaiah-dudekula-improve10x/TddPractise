@@ -1,3 +1,5 @@
+package convertminutestoseconds;
+
 public class MinutesToSeconds {
 
     public int minutesToSeconds(int minutes) {

@@ -1,3 +1,5 @@
+package isdivisiblebyfive;
+
 public class IsDivisibleBy5 {
 
     public boolean isDivisibleBy5(int num) {
