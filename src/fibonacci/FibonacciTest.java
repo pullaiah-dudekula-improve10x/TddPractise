@@ -1,4 +1,6 @@
-import org.junit.Assert;
+package fibonacci;
+
+import fibonacci.Fibonacci;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
