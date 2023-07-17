@@ -1,3 +1,5 @@
+package existhighernumber;
+
 public class ExistHigherNumber {
 
     public boolean existHigherNumber(int [] arr, int num) {
