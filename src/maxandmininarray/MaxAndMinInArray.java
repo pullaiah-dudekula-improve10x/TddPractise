@@ -1,3 +1,5 @@
+package maxandmininarray;
+
 public class MaxAndMinInArray {
 
     public int maxAndMinInArray(int [] array) {

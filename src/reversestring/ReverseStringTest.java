@@ -42,4 +42,9 @@ class ReverseStringTest {
         String reverseText = reverseString.reverseString("PULLAIAH");
         assertEquals("HAIALLUP", reverseText);
     }
+    @Test
+    public void givenOneLetter_reverseOneLetter() {
+        String givenTwoLetters = reverseString.reverseString("P");
+        assertEquals("P", givenTwoLetters);
+    }
 }

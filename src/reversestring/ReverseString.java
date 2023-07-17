@@ -6,6 +6,8 @@ public class ReverseString {
         String reverseText = "";
         if (text.equals("")) {
             return "";
+        } else if (text.length() == 1) {
+            return text;
         } else {
             for (int i = text.length() - 1; i >= 0; i--) {
                 reverseText = reverseText + text.charAt(i);

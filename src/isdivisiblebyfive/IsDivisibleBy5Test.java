@@ -9,7 +9,6 @@ class IsDivisibleBy5Test {
 
     @Test
     public void nothing() {
-
     }
 
 
@@ -40,5 +39,12 @@ class IsDivisibleBy5Test {
         IsDivisibleBy5 isDivisibleBy5 = new IsDivisibleBy5();
         boolean isDivisibleByFiveTest = isDivisibleBy5.isDivisibleBy5(8);
         assertEquals(false, isDivisibleByFiveTest);
+    }
+
+    @Test
+    public void FiveIsDivisibleByFive() {
+        IsDivisibleBy5 isDivisibleBy5 = new IsDivisibleBy5();
+        boolean isDivisibleByFiveTest = isDivisibleBy5.isDivisibleBy5(5);
+        assertEquals(true, isDivisibleByFiveTest);
     }
 }

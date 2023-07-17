@@ -1,3 +1,6 @@
+package maxandmininarray;
+
+import maxandmininarray.MaxAndMinInArray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

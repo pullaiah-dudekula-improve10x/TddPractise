@@ -31,4 +31,17 @@ class ThreeProgrammersTest {
         int returnOne = programmers.threeProgrammers(1, 2, 1);
         assertEquals(1, returnOne);
     }
+
+    @Test
+    public void givenThreeValues_returnNinetyNine() {
+        ThreeProgrammers programmers = new ThreeProgrammers();
+        int returnOne = programmers.threeProgrammers(100, 150, 1);
+        assertEquals(149, returnOne);
+    }
+    @Test
+    public void givenThreeValues_returnThree() {
+        ThreeProgrammers programmers = new ThreeProgrammers();
+        int returnOne = programmers.threeProgrammers(25, 23, 22);
+        assertEquals(3, returnOne);
+    }
 }
