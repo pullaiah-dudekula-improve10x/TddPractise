@@ -1,3 +1,5 @@
+package integerinrange;
+
 public class IntegerInRange {
 
     public boolean integerInRange(int n, int a, int b) {
