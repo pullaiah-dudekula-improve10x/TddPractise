@@ -3,7 +3,7 @@ package namegreeting;
 public class NameGreeting {
 
     public String nameGreeting(String name) {
-        if (name.equals("")) {
+        if (name == null || name.equals("")) {
             return "";
         }
         String result = "";

@@ -3,7 +3,7 @@ package maxandmininarray;
 public class MaxAndMinInArray {
 
     public int maxAndMinInArray(int [] array) {
-        if (array.length <= 0) {
+        if (array == null || array.length <= 0) {
             return 0;
         } else {
             int difference = 0;

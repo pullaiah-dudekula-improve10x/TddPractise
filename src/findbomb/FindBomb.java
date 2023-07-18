@@ -5,7 +5,7 @@ import java.util.Locale;
 public class FindBomb {
 
     public String findBomb(String text) {
-        if (text.equals("")) {
+        if (text == null || text.equals("")) {
             return "";
         } else {
             String result = "";

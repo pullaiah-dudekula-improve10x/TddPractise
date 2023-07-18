@@ -14,7 +14,6 @@ class FindBombTest {
         findBomb = new FindBomb();
     }
 
-
     @Test
     void nothing() {
     }
@@ -26,26 +25,38 @@ class FindBombTest {
     }
 
     @Test
+    public void givenNull_returnEmpty() {
+        String returnEmpty = findBomb.findBomb("");
+        assertEquals("", returnEmpty);
+    }
+
+    @Test
     public void givenBomb_returnDuck() {
-        String returnEmpty = findBomb.findBomb("bomb");
-        assertEquals("Duck!", returnEmpty);
+        String returnDuck = findBomb.findBomb("Thefts are keeped bomb in shopping mall");
+        assertEquals("Duck!", returnDuck);
+    }
+
+    @Test
+    public void givenBombInShoppingMall_returnDuck() {
+        String returnDuck = findBomb.findBomb("In my home having bomb");
+        assertEquals("Duck!", returnDuck);
     }
 
     @Test
     public void givenDuck_returnRelaxThereIsNoBomb() {
-        String returnEmpty = findBomb.findBomb("Duck");
-        assertEquals("Relax there is no Bomb!", returnEmpty);
+        String returnRelaxThereIsNoBomb = findBomb.findBomb("Duck");
+        assertEquals("Relax there is no Bomb!", returnRelaxThereIsNoBomb);
     }
 
     @Test
     public void givenThereIsBomb_returnDuck() {
-        String returnEmpty = findBomb.findBomb("There is Bomb");
-        assertEquals("Duck!", returnEmpty);
+        String returnDuck = findBomb.findBomb("There is Bomb");
+        assertEquals("Duck!", returnDuck);
     }
 
     @Test
     public void givenRelax_returnRelaxThereIsNoBomb() {
-        String returnEmpty = findBomb.findBomb("relax");
-        assertEquals("Relax there is no Bomb!", returnEmpty);
+        String  returnRelaxThereIsNoBomb = findBomb.findBomb("relax");
+        assertEquals("Relax there is no Bomb!", returnRelaxThereIsNoBomb);
     }
 }

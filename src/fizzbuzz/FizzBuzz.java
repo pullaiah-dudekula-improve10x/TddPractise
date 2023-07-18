@@ -4,7 +4,9 @@ public class FizzBuzz {
 
     public String findFizzBuzz(int n) {
         String result = "";
-        if (n % 3 == 0 && n % 5 == 0) {
+        if (n <= 0) {
+            result =  "Zero";
+        }  else if(n % 3 == 0 && n % 5 == 0) {
             result = "FizzBuzz";
         } else if (n % 3 == 0) {
             result = "Fizz";

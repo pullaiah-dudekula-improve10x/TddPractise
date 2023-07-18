@@ -1,3 +1,5 @@
+package nthevennumber;
+
 public class NThEvenNumber {
 
     public int findNThEvenNumber(int num) {
@@ -6,7 +8,7 @@ public class NThEvenNumber {
         } else if (num < 0) {
             return -1;
         } else {
-            return 2 * (num - 1);
+            return 2 * num - 2;
         }
     }
 }

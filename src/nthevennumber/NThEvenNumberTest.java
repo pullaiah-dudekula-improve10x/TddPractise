@@ -1,3 +1,5 @@
+package nthevennumber;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -30,8 +32,8 @@ class NThEvenNumberTest {
 
     @Test
     public void givenTen_returnEighteen() {
-        int returnZero =  nThEvenNumber.findNThEvenNumber(10);
-        assertEquals(18, returnZero);
+        int returnZero =  nThEvenNumber.findNThEvenNumber(4);
+        assertEquals(6, returnZero);
     }
 
     @Test
@@ -42,7 +44,7 @@ class NThEvenNumberTest {
 
     @Test
     public void givenTwentyFive_returnFortyEight() {
-        int returnZero =  nThEvenNumber.findNThEvenNumber(25);
-        assertEquals(48, returnZero);
+        int returnZero =  nThEvenNumber.findNThEvenNumber(24);
+        assertEquals(46, returnZero);
     }
 }

@@ -19,6 +19,19 @@ class LessThenHundredTest {
     }
 
     @Test
+    public void givenABZeros_returnFalse() {
+        boolean returnFalse = lessThenHundred.lessThenHundred(0, 0);
+        assertEquals(false, returnFalse);
+    }
+
+    @Test
+    public void givenABNegatives_returnFalse() {
+        boolean returnFalse = lessThenHundred.lessThenHundred(-1, -2);
+        assertEquals(false, returnFalse);
+    }
+
+
+    @Test
     public void twentyTwo_fifteen_isLessThenHundred () {
         boolean returnTrue = lessThenHundred.lessThenHundred(115, 25);
         assertEquals(false, returnTrue);

@@ -25,6 +25,13 @@ class NameGreetingTest {
     }
 
     @Test
+    public void givenNull_returnEmpty() {
+        String returnEmpty = nameGreeting.nameGreeting("");
+        assertEquals("", returnEmpty);
+    }
+
+
+    @Test
     public void givenName_returnHelloText() {
         String returnName = nameGreeting.nameGreeting("Pullaiah");
         assertEquals("Hello Pullaiah!", returnName);

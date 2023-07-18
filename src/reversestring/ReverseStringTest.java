@@ -26,6 +26,12 @@ class ReverseStringTest {
     }
 
     @Test
+    public void givenNull_returnEmpty() {
+        String givenEmpty = reverseString.reverseString(null);
+        assertEquals("", givenEmpty);
+    }
+
+    @Test
     public void givenTwoLetters_reverseTwoLetters() {
         String givenTwoLetters = reverseString.reverseString("PU");
         assertEquals("UP", givenTwoLetters);

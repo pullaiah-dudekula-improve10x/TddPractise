@@ -25,6 +25,12 @@ class FizzBuzzTest {
     }
 
     @Test
+    public void givenNZeroReturn_Zero() {
+        String fizzBuzz1 = fizzBuzz.findFizzBuzz(-1);
+        assertEquals("Zero",fizzBuzz1 );
+    }
+
+    @Test
     public void findOnlyFizz() {
         String fizz = fizzBuzz.findFizzBuzz(15);
         assertEquals("FizzBuzz",fizz);
