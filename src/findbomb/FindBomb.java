@@ -1,3 +1,5 @@
+package findbomb;
+
 import java.util.Locale;
 
 public class FindBomb {

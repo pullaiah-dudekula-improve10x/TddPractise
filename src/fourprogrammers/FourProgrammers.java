@@ -1,3 +1,5 @@
+package fourprogrammers;
+
 public class FourProgrammers {
 
     public int fourProgrammers(int paid1, int paid2, int paid3, int paid4) {
