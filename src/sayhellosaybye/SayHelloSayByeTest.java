@@ -1,3 +1,5 @@
+package sayhellosaybye;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +26,7 @@ class SayHelloSayByeTest {
 
     @Test
     public void givenNull_returnEmpty() {
-        String returnEmpty = sayHelloSayBye.sayHelloSayBye("", 5);
+        String returnEmpty = sayHelloSayBye.sayHelloSayBye("Pu", -1);
         assertEquals("", returnEmpty);
     }
 

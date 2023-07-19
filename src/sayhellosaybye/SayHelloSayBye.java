@@ -1,3 +1,5 @@
+package sayhellosaybye;
+
 public class SayHelloSayBye {
 
     public String sayHelloSayBye(String name, int num) {
