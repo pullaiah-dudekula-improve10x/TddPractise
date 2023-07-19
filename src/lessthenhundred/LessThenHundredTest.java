@@ -32,20 +32,26 @@ class LessThenHundredTest {
 
 
     @Test
-    public void twentyTwo_fifteen_isLessThenHundred () {
+    public void givenTwentyTwo_fifteen_isLessThenHundred () {
         boolean returnTrue = lessThenHundred.lessThenHundred(115, 25);
         assertEquals(false, returnTrue);
     }
 
     @Test
-    public void eightyThree_thirtyFour_isLessThenHundred () {
+    public void givenEightyThree_thirtyFour_isLessThenHundred () {
         boolean returnFalse = lessThenHundred.lessThenHundred(83, 34);
         assertEquals(false, returnFalse);
     }
 
     @Test
+    public void givenFifteen_thirty () {
+        boolean returnFalse = lessThenHundred.lessThenHundred(15, 30);
+        assertEquals(true, returnFalse);
+    }
+
+    @Test
     public void three_seventySeven_isLessThenHundred () {
-        boolean returnTrue = lessThenHundred.lessThenHundred(83, 34);
+        boolean returnTrue = lessThenHundred.lessThenHundred(99, 1);
         assertEquals(false, returnTrue);
     }
 }

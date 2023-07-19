@@ -36,7 +36,7 @@ public class FibonacciTest {
     @Test
     public void givenTwo_returnTwo() {
         Fibonacci fibonacci = new Fibonacci();
-        int givenTwo = fibonacci.find(2);
+        int givenTwo = fibonacci.find(1);
         assertEquals(1, givenTwo);
     }
 
@@ -49,7 +49,7 @@ public class FibonacciTest {
     @Test
     public void givenTen_returnFive() {
         Fibonacci fibonacci = new Fibonacci();
-        int givenFive = fibonacci.find(10);
+        int givenFive = fibonacci.find(6);
         assertEquals(55, givenFive);
     }
 }
