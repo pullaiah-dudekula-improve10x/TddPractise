@@ -1,3 +1,5 @@
+package findlargestnameinarray;
+
 public class FindLongestNameInArray {
 
     public String findLongestNameInArray(String [] names) {
