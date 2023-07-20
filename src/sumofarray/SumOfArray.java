@@ -1,3 +1,5 @@
+package sumofarray;
+
 public class SumOfArray {
 
     public int sumOfArray(int [] numbers) {
