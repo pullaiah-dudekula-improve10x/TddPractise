@@ -1,3 +1,5 @@
+package countvowels;
+
 public class CountVowels {
 
     public int countVowels(String text) {
