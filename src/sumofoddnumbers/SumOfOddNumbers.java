@@ -1,3 +1,5 @@
+package sumofoddnumbers;
+
 public class SumOfOddNumbers {
 
     public int sumOfOddNumbers(int [] numbers) {
