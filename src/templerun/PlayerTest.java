@@ -1,17 +1,27 @@
 package templerun;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PlayerTest {
 
+    private ByteArrayOutputStream outputStream;
+
+    @BeforeEach
+    private void setUp() {
+        outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+    }
+
     @Test
-
     public void nothing() {
-
     }
 
     @Test
@@ -70,7 +80,7 @@ public class PlayerTest {
         assertEquals(90, player.getHealth());
     }
 
-     /* @Test
+      @Test
     public void whenRunCalled_displaysRunningMessage() throws Player.InvalidHealthException {
         Player player = new Player("Name", 100);
         player.run();
@@ -90,7 +100,7 @@ public class PlayerTest {
         assertEquals(10, player.getScore());
     }
 
-    @Test
+    /*@Test
     public void givenCoins10adn20_whenGetScoreCalled_returns30() throws Player.InvalidHealthException {
         Player player = new Player("Name");
         player.collectCoin(new Coin(10));
