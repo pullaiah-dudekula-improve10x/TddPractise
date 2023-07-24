@@ -3,6 +3,9 @@ package templerun;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class PlayerTest {
 
     @Test
@@ -14,18 +17,92 @@ public class PlayerTest {
     @Test
     public void givenNameNull_whenGetNameCalled_thenReturnEmpty() {
         Player player = new Player(null);
-        Assert.assertEquals("", player.getName());
+        assertEquals("", player.getName());
     }
 
     @Test
     public void givenNameEmpty_whenGetNameCalled_returnEmpty() {
         Player player = new Player("");
-        Assert.assertEquals("", player.getName());
+        assertEquals("", player.getName());
     }
 
     @Test
     public void givenNameExplorer_whenGetNameCalledReturnExplorer() {
+        Player player = new Player("Explorer");
+        assertEquals("Explorer", player.getName());
 
     }
+    @Test
+    public void givenNameExplorerWIthSpaces_whenGetNameCalled_returnsExplorerTrimmed() {
+        Player player = new Player(" Explorer  ");
+        assertEquals("Explorer", player.getName());
+    }
+
+    @Test
+    public void givenNoHealth_whenGetHealthCalled_returns100() {
+        Player player = new Player("Name");
+        assertEquals(100, player.getHealth());
+    }
+
+    @Test
+    public void givenHealthMinusOne_thenThrowsInvalidHealthException() {
+        assertThrows(Player.InvalidHealthException.class,
+                () -> new Player("Name", -1),
+                "Health should be between 0 and 100");
+    }
+
+   /* @Test
+    public void givenHealth101_thenThrowsInvalidHealthException() {
+        assertThrows(Player.InvalidHealthException.class,
+                () -> new Player("Name", 101),
+                "Health should be between 0 and 100");
+    }
+
+    @Test
+    public void givenHealth100_whenGetHealthCalled_thenReturn100() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 100);
+        assertEquals(100, player.getHealth());
+    }
+
+    @Test
+    public void givenHealth90_whenGetHealthCalled_thenReturn90() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 90);
+        assertEquals(90, player.getHealth());
+    }
+
+    @Test
+    public void whenRunCalled_displaysRunningMessage() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 100);
+        player.run();
+        assertEquals("Running...!", outputStream.toString().trim());
+    }
+
+    @Test
+    public void whenGetScoreCalled_returns0() throws Player.InvalidHealthException {
+        Player player = new Player("Name");
+        assertEquals(0, player.getScore());
+    }
+
+    @Test
+    public void givenCoin10_whenGetScoreCalled_returns10() throws Player.InvalidHealthException {
+        Player player = new Player("Name");
+        player.collectCoin(new Coin(10));
+        assertEquals(10, player.getScore());
+    }
+
+    @Test
+    public void givenCoins10adn20_whenGetScoreCalled_returns30() throws Player.InvalidHealthException {
+        Player player = new Player("Name");
+        player.collectCoin(new Coin(10));
+        player.collectCoin(new Coin(20));
+        assertEquals(30, player.getScore());
+    }
+
+    @Test
+    public void whenJumpCalled_displaysJumptingMessage() throws Player.InvalidHealthException {
+        Player player = new Player("Name");
+        player.jump();
+        assertEquals("Name jumped to avoid obstacles!", outputStream.toString().trim());
+    }*/
 
 }
