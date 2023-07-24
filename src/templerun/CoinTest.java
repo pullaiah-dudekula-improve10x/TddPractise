@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CoinTest {
 
-
     @Test
     public void givenMinusOne_throwsInvalidCoinValueException() {
         assertThrows(Coin.InvalidCoinValueException.class, () -> new Coin(-1),

@@ -12,11 +12,11 @@ public class Player {
     }
 
     public Player(String name, int health) {
+        this.name = (name == null) ? "" : name.trim();
         if(health <0 || health > 100) {
             throw new  InvalidHealthException();
-        } else {
-            this.health = health;
         }
+        this.health = health;
     }
 
     public String getName() {
@@ -36,7 +36,11 @@ public class Player {
     }
 
     public void collectCoin(Coin coin) {
-        this.score = coin.getValue();
+        this.score += coin.getValue();
+    }
+
+    public void jump() {
+        System.out.println(name + " jumped to avoid obstacles!");
     }
 
     public class InvalidHealthException extends RuntimeException {

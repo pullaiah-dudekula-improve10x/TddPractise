@@ -100,7 +100,7 @@ public class PlayerTest {
         assertEquals(10, player.getScore());
     }
 
-    /*@Test
+    @Test
     public void givenCoins10adn20_whenGetScoreCalled_returns30() throws Player.InvalidHealthException {
         Player player = new Player("Name");
         player.collectCoin(new Coin(10));
@@ -108,11 +108,10 @@ public class PlayerTest {
         assertEquals(30, player.getScore());
     }
 
-    @Test
+   @Test
     public void whenJumpCalled_displaysJumptingMessage() throws Player.InvalidHealthException {
         Player player = new Player("Name");
         player.jump();
         assertEquals("Name jumped to avoid obstacles!", outputStream.toString().trim());
-    }*/
-
+    }
 }
