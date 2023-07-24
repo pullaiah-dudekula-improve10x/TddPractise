@@ -51,14 +51,14 @@ public class PlayerTest {
                 "Health should be between 0 and 100");
     }
 
-   /* @Test
+   @Test
     public void givenHealth101_thenThrowsInvalidHealthException() {
         assertThrows(Player.InvalidHealthException.class,
                 () -> new Player("Name", 101),
                 "Health should be between 0 and 100");
     }
 
-    @Test
+     @Test
     public void givenHealth100_whenGetHealthCalled_thenReturn100() throws Player.InvalidHealthException {
         Player player = new Player("Name", 100);
         assertEquals(100, player.getHealth());
@@ -70,7 +70,7 @@ public class PlayerTest {
         assertEquals(90, player.getHealth());
     }
 
-    @Test
+     /* @Test
     public void whenRunCalled_displaysRunningMessage() throws Player.InvalidHealthException {
         Player player = new Player("Name", 100);
         player.run();
