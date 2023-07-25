@@ -3,12 +3,12 @@ package templerun;
 public class Player {
     private String name;
     private int health;
+
+    private int totalCoinValue;
     private int score;
 
     public Player(String name) {
-       this.name = (name == null) ? "" : name.trim();
-       this.health = 100;
-       this.score = 0;
+        this(name, 100);
     }
 
     public Player(String name, int health) {
@@ -32,11 +32,12 @@ public class Player {
     }
 
     public int getScore() {
+        score = totalCoinValue;
         return score;
     }
 
     public void collectCoin(Coin coin) {
-        this.score += coin.getValue();
+        this.totalCoinValue += coin.getValue();
     }
 
     public void jump() {
