@@ -3,6 +3,7 @@ package templerun;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ObstacleTest {
 
@@ -29,9 +30,15 @@ public class ObstacleTest {
 
     }
     @Test
-    public void givenNameObstacleWithSpaces_whenGetNameCalled_returnSpikePit() {
+    public void givenNameObstacleWithSpaces_whenGetNameCalled_returnSpikePit() throws Obstacle.InvalidObstacleDamageException {
         Obstacle obstacle = new Obstacle("   Obstacle    ", 20);
         assertEquals("Obstacle", obstacle.getName());
+    }
+    @Test
+    public void givenDamageMinusOne_thenThrowsInvalidObstacleDamageException() {
+        assertThrows(Obstacle.InvalidObstacleDamageException.class,
+                () -> new Obstacle("Suresh", -1),
+                "Obstacle damage should be 0 to 100");
     }
 
 }
